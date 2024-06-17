@@ -29,8 +29,9 @@ const server = createServer((request, response) => {
     return;
   }
 
+  response.writeHead(404, headers);
   response.end("not found.");
-}, {});
+});
 
 server.listen(8000, () => {
   console.log(`Server up and running http://localhost:8000`);
